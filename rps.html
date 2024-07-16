@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камень, ножницы, бумага</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Камень, ножницы, бумага</h1>
+        <div id="mode-selection">
+            <button onclick="startGame('friend')">Играть с другом</button>
+            <button onclick="startGame('bot')">Играть с ботом</button>
+        </div>
+        <div id="game-area" style="display: none;">
+            <div id="player1-area">
+                <h2>Игрок 1, выберите ваш ход:</h2>
+                <button onclick="makeMove('rock')">Камень</button>
+                <button onclick="makeMove('scissors')">Ножницы</button>
+                <button onclick="makeMove('paper')">Бумага</button>
+            </div>
+            <div id="player2-area" style="display: none;">
+                <h2>Игрок 2, выберите ваш ход:</h2>
+                <button onclick="makeMove('rock')">Камень</button>
+                <button onclick="makeMove('scissors')">Ножницы</button>
+                <button onclick="makeMove('paper')">Бумага</button>
+            </div>
+            <div id="result" style="display: none;">
+                <h2 id="result-text"></h2>
+                <div id="moves"></div>
+                <button onclick="restartGame()">Сыграть снова</button>
+                <button onclick="navigateToHome()">Назад к выбору игры</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
