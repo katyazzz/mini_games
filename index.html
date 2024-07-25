@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мини игры</title>
+    <title>Игры</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Выберите мини-игру</h1>
+        <h1>Добро пожаловать в Игры</h1>
         <div id="game-selection">
-            <button onclick="navigateToGame('rps.html')">Камень, ножницы, бумага</button>
-            <!-- Здесь можно добавить кнопки для других мини-игр -->
+            <button class="mode-button" onclick="navigateTo('rps.html')">Камень, ножницы, бумага</button>
+            <button class="mode-button" onclick="navigateTo('tictactoe.html')">Крестики-нолики</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
 </body>
 </html>

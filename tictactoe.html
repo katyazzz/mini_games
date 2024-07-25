@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крестики-нолики</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Крестики-нолики</h1>
+        <div id="mode-selection">
+            <button class="mode-button" onclick="startGame('friend')">Играть с другом</button>
+            <button class="mode-button" onclick="startGame('bot')">Играть с ботом</button>
+        </div>
+        <div id="game-area" style="display: none;">
+            <div id="board" class="board"></div>
+            <div id="result" style="display: none;">
+                <h2 id="result-text"></h2>
+                <button class="result-button" onclick="restartGame()">Сыграть снова</button>
+                <button class="result-button" onclick="navigateToHome()">Назад к выбору игры</button>
+            </div>
+        </div>
+    </div>
+    <script src="tictactoe.js"></script>
+</body>
+</html>
